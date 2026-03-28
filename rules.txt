@@ -1,5 +1,0 @@
-neverssl
-never ssl
-example domain
-microsoft.com
-
