@@ -61,7 +61,7 @@ IDS never sees plaintext or keys.
 ---
 
 ## Project Structure
-
+```
 blindgate/
 │
 ├── blindgate_proxy.py          # HTTP interception + tokenization
@@ -74,10 +74,10 @@ blindgate/
 │
 ├── proxy-logs/                 # Gateway logs
 └── rules-logs/                 # IDS logs
-
+```
 ---
 
-## ⚙️ How It Works
+## How It Works
 
 ### 1. Rule Preparation (Offline)
 ```bash
@@ -91,7 +91,7 @@ Converts plaintext rules → encrypted tokens
 ```
 
 ### 3. Traffic Flow
-``
+```
 	1.	Client sends HTTP request
 	2.	Gateway intercepts traffic
 	3.	Payload is:
@@ -99,3 +99,4 @@ Converts plaintext rules → encrypted tokens
 		•	Encrypted
 	4.	Encrypted tokens → IDS
 	5.	IDS performs matching → Alert
+```
