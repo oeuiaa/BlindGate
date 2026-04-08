@@ -8,12 +8,12 @@ It adapts concepts from BlindBox and introduces a **client-transparent deploymen
 
 ---
 
-## 🚀 Overview
+## Overview
 
 Traditional DPI becomes ineffective with TLS encryption. Existing solutions:
 
-- ❌ Break privacy (MITM proxies)
-- ❌ Require endpoint modification (BlindBox)
+- Break privacy (MITM proxies)
+- Require endpoint modification (BlindBox)
 
 BlindGate solves this by:
 
@@ -23,7 +23,7 @@ BlindGate solves this by:
 
 ---
 
-## 🧠 Architecture
+## Architecture
 
 Client → BlindGate (Trusted Gateway) → IDS (Untrusted)
 
@@ -40,11 +40,11 @@ Client → BlindGate (Trusted Gateway) → IDS (Untrusted)
   - Matches against encrypted rule sets
   - Generates alerts
 
-⚠️ IDS never sees plaintext or keys.
+IDS never sees plaintext or keys.
 
 ---
 
-## 🔐 Core Concepts
+## Core Concepts
 
 ### 1. Tokenization
 - Sliding window (n-gram)
@@ -55,12 +55,12 @@ Client → BlindGate (Trusted Gateway) → IDS (Untrusted)
 - Enables **equality matching without decryption**
 
 ### 3. Trust Model
-- ✅ Gateway = Trusted
-- ❌ IDS = Untrusted
+- Gateway = Trusted
+- IDS = Untrusted
 
 ---
 
-## 🏗️ Project Structure
+## Project Structure
 
 blindgate/
 │
@@ -91,11 +91,11 @@ Converts plaintext rules → encrypted tokens
 ```
 
 ### 3. Traffic Flow
-
+``
 	1.	Client sends HTTP request
 	2.	Gateway intercepts traffic
 	3.	Payload is:
-	•	Tokenized
-	•	Encrypted
+		•	Tokenized
+		•	Encrypted
 	4.	Encrypted tokens → IDS
 	5.	IDS performs matching → Alert
