@@ -4,7 +4,7 @@ BlindGate is a gateway-based architecture for performing **Deep Packet Inspectio
 
 It adapts concepts from BlindBox and introduces a **client-transparent deployment model**, eliminating the need for endpoint modifications.
 
-📄 Based on research paper:  BlindGatel A Gateway Architecture for Practical Privacy-Preserving Deep Packet Inspection on Encrypted Traffic
+<em>Based on research paper:  BlindGatel A Gateway Architecture for Practical Privacy-Preserving Deep Packet Inspection on Encrypted Traffic</em>
 
 ---
 
@@ -29,13 +29,13 @@ Client → BlindGate (Trusted Gateway) → IDS (Untrusted)
 
 ### Key Idea
 
-- Gateway:
+- Gateway (Trusted):
   - Intercepts traffic
   - Tokenizes payload
   - Encrypts tokens (HMAC-SHA256)
   - Sends encrypted tokens to IDS
 
-- IDS:
+- IDS (Untrusted):
   - Receives encrypted tokens
   - Matches against encrypted rule sets
   - Generates alerts
