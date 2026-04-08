@@ -62,18 +62,22 @@ IDS never sees plaintext or keys.
 
 ## Project Structure
 ```
-blindgate/
+BLINDGATE/
 │
 ├── blindgate_proxy.py          # HTTP interception + tokenization
 ├── blindgate_crypto.py         # Encryption logic (HMAC)
 ├── encrypted_rule_builder.py   # Rule preprocessing
 ├── blindgate_rule_server.py    # Rule distribution
-├── blindgate_ids.py            # Custom IDS engine
 ├── rules.txt                   # Plaintext rules
 ├── run.sh                      # Orchestration script
 │
 ├── proxy-logs/                 # Gateway logs
 └── rules-logs/                 # IDS logs
+```
+```
+IDS/
+│
+└── blindgate_ids.py            # Custom IDS engine
 ```
 ---
 
